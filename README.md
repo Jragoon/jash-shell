@@ -9,20 +9,14 @@ Parse input
 
 Create implementations of common shell programs
 
-    - file creation 
-
-    - default shell functions (ls, cd, etc.)
-
-    - starting programs
+    - File creation
+    - Default shell functions (ls, cd, etc.)
+    - Starting programs
 
 
 Order of execution:
 
     - Shell functions
-
-    - built-in commands
-
-    - normal programs
-
-    - error
-
+    - Built-in commands
+    - Normal programs
+    - Error
