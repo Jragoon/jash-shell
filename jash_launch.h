@@ -7,6 +7,7 @@
 
 #include <vector>
 #include <string>
+#include <wait.h>
 #include "jash_core_commands.h"
 
 int jash_launch(std::vector<std::string> args);

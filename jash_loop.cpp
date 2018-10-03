@@ -8,13 +8,15 @@
 #include "jash_launch.h"
 
 void jash_loop(void) {
+
     std::string line;
     std::vector<std::string> args;
     char buffer[256];
     int status;
 
-    do {
+    std::cout << "Welcome to jash - Just Another Shell" << std::endl;
 
+    do {
         std::cout << getcwd(buffer, 256) << "> ";
         line = jash_read_line();
         args = jash_parse_line(line);
