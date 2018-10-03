@@ -4,6 +4,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <unistd.h>
 
 void jash_loop(void);
 

@@ -7,9 +7,18 @@
 
 #include <string>
 #include <iostream>
+#include <vector>
+#include <unistd.h>
 
-int jash_cd(std::string);
-int jash_help(std::string);
-int jash_exit(std::string);
+static std::vector<std::string> core_list = {
+        "cd",
+        "help",
+        "exit"
+};
 
-#endif //JASH_JASH_CORE_COMMANDS_H
+int jash_cd(std::vector<std::string> args);
+int jash_help(std::vector<std::string> args);
+int jash_exit(std::vector<std::string> args);
+int jash_handler(int , std::vector<std::string> args);
+
+#endif

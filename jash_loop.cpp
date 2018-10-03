@@ -10,10 +10,12 @@
 void jash_loop(void) {
     std::string line;
     std::vector<std::string> args;
+    char buffer[256];
     int status;
 
     do {
-        std::cout << "> ";
+
+        std::cout << getcwd(buffer, 256) << "> ";
         line = jash_read_line();
         args = jash_parse_line(line);
         for (auto i: args)

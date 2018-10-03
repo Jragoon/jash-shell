@@ -11,4 +11,4 @@
 
 int jash_launch(std::vector<std::string> args);
 
-#endif //JASH_JASH_LAUNCH_H
+#endif
