@@ -9,8 +9,6 @@ int status;
 
 int jash_launch(std::vector<std::string> args) {
 
-    //if (args[0])
-
     for (int i = 0; i < core_list.size(); i++) {
         if (args[0] == core_list[i]) return jash_handler(i, args);
     }
@@ -18,6 +16,7 @@ int jash_launch(std::vector<std::string> args) {
     // Prepare args for execvp function call
     const char **exec_args = new const char* [args.size() - 1];
     for (int i = 0; i < args.size() - 1; i++) exec_args[i] = args[i].c_str();
+    if (exec_args[0] == NULL) exec_args[0] = "";
 
     pid = fork();
     if (pid == 0) {
@@ -28,10 +27,10 @@ int jash_launch(std::vector<std::string> args) {
         exit(EXIT_FAILURE);
     }
     else if (pid < 0) {
-        exit(EXIT_FAILURE);
+        perror("jsh");
     }
     else {
-        // Fly free, process friend
+        // Fly free, process mom or dad
         do {
             waitpid(pid, &status, WUNTRACED);
         } while (!WIFEXITED(status) and !WIFSIGNALED(status));
