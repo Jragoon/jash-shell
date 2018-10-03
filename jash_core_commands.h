@@ -19,6 +19,7 @@ static std::vector<std::string> core_list = {
 int jash_cd(std::vector<std::string> args);
 int jash_help(std::vector<std::string> args);
 int jash_exit(std::vector<std::string> args);
+int jash_clear(std::vector<std::string> args);
 int jash_handler(int , std::vector<std::string> args);
 
 #endif

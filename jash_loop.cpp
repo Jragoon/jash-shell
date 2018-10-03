@@ -17,7 +17,7 @@ void jash_loop(void) {
     std::cout << "Welcome to jash - Just Another Shell" << std::endl;
 
     do {
-        std::cout << getcwd(buffer, 256) << "> ";
+        std::cout << getcwd(buffer, 256) << " ~> ";
         line = jash_read_line();
         args = jash_parse_line(line);
         for (auto i: args)

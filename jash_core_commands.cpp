@@ -31,9 +31,18 @@ int jash_exit(std::vector<std::string> args) {
     return 0;
 }
 
+int jash_clear(std::vector<std::string> args) {
+    std::cout << "\\033[2J" << "\0333" << std::endl;
+    return 1;
+}
+
 int jash_handler(int function_code, std::vector<std::string> args) {
-    if (function_code == 0) return jash_cd(args);
-    else if (function_code == 1) return jash_help(args);
-    else if (function_code == 2) return jash_exit(args);
-    else return 1;
+    switch(function_code) {
+        case 0: return jash_cd(args);
+        case 1: return jash_help(args);
+        case 2: return jash_exit(args);
+        case 3: return jash_clear(args);
+        // Something went wrong
+        default: return 0;
+    }
 }
