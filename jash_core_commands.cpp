@@ -37,6 +37,7 @@ int jash_clear(std::vector<std::string> args) {
     return 1;
 }
 
+// core_list should match jash_handler
 int jash_handler(int function_code, std::vector<std::string> args) {
     switch(function_code) {
         case 0: return jash_cd(args);

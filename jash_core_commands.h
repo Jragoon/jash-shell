@@ -10,6 +10,7 @@
 #include <vector>
 #include <unistd.h>
 
+// core_list should match jash_handler
 static std::vector<std::string> core_list = {
         "cd",
         "help",

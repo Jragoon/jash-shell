@@ -7,7 +7,8 @@
 
 #include <vector>
 #include <string>
+#include "jash_autocomplete.h"
 
-std::vector<std::string> jash_parse_line(std::string);
+std::vector<std::string> jash_parse_line(std::string input_line);
 
 #endif
