@@ -20,9 +20,9 @@ void jash_loop(void) {
         std::cout << getcwd(buffer, 256) << " ~> ";
         line = jash_read_line();
         args = jash_parse_line(line);
-        for (auto i: args)
-            std::cout << i << ' ';
-            std::cout << '\n';
+        //for (auto i: args)
+            //std::cout << i << ' ';
+            //std::cout << '\n';
         status = jash_launch(args);
     } while (status);
 }

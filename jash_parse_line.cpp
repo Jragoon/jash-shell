@@ -15,5 +15,6 @@ std::vector<std::string> jash_parse_line(std::string input_line) {
         }
         else current_arg += input_line[i];
     }
+    args.push_back(current_arg);
     return args;
 }

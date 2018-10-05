@@ -16,7 +16,7 @@ int jash_launch(std::vector<std::string> args) {
     // Prepare args for execvp function call
     const char **exec_args = new const char* [args.size() - 1];
     for (int i = 0; i < args.size() - 1; i++) exec_args[i] = args[i].c_str();
-    if (exec_args[0] == NULL) exec_args[0] = "";
+    if (exec_args[0] == nullptr) exec_args[0] = "";
 
     pid = fork();
     if (pid == 0) {

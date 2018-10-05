@@ -15,15 +15,15 @@ int jash_cd(std::vector<std::string> args) {
 }
 
 int jash_help(std::vector<std::string> args) {
-    std::cout << "jash: Just Another Shell\n" << std::endl;
-    std::cout << "core commands include: " << std::endl;
+    std::cout << "\njash - Just Another Shell\n" << std::endl;
+    std::cout << "Core commands include: " << std::endl;
 
     for (std::string i : core_list) {
         std::cout << "- " << i << std::endl;
     }
 
     std::cout << "\nwritten by Jared Taylor" << std::endl;
-    std::cout << "see more: https://github.com/Jragoon/jash-shell" << std::endl;
+    std::cout << "see more: https://github.com/Jragoon/jash-shell\n" << std::endl;
     return 1;
 }
 
@@ -32,7 +32,8 @@ int jash_exit(std::vector<std::string> args) {
 }
 
 int jash_clear(std::vector<std::string> args) {
-    std::cout << "\\033[2J" << "\0333" << std::endl;
+    // \033[2J clear the screen, \0333 positions the cursor at (row 1, column 1)
+    std::cout << "\033[2J\033[1;1H";
     return 1;
 }
 
