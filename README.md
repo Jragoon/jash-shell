@@ -1,6 +1,20 @@
 # What is jash?
 
-jash is an interactive shell made for Unix family operating systems. It's a functional shell that is capable of processing common built-in commands found in normal Linux shells such as cd, ls, or similar. It is capable of starting processes and basic functionality for work done in a command line environment.
+jash is an interactive shell made for Unix!
+
+# Want to try?
+First, clone the repository and build the project:
+
+``` 
+$ git clone https://github.com/Jragoon/jash-shell/
+$ cd jash-shell/src
+$ make; make clean
+```    
+Then, to start the shell:
+
+``` 
+$ ./jash 
+```
 
 # Screenshots
 
